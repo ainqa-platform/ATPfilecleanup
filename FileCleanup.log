@@ -1,0 +1,915 @@
+2022-10-03 10:50:17  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 20980 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-03 10:50:17  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-03 10:50:18  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.812 seconds (JVM running for 2.64)
+2022-10-03 10:50:42 ERROR FileCleanupController:45 - Message: For input string: "ssss"
+StackTrace
+java.lang.NumberFormatException: For input string: "ssss"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.atp.filecleanup.FileCleanupController.GetValues(FileCleanupController.java:21)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-03 11:40:20  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 18784 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-03 11:40:20  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-03 11:40:21  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.269 seconds (JVM running for 3.274)
+2022-10-03 11:40:55 ERROR FileCleanupController:45 - Message: For input string: "ssss"
+StackTrace
+java.lang.NumberFormatException: For input string: "ssss"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.atp.filecleanup.FileCleanupController.GetValues(FileCleanupController.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-03 11:44:59  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 4392 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-03 11:44:59  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-03 11:45:01  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.364 seconds (JVM running for 3.539)
+2022-10-03 11:45:07  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 16796 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-03 11:45:07  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-03 11:45:08  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.32 seconds (JVM running for 3.354)
+2022-10-03 11:49:49  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 4860 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-03 11:49:49  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-03 11:49:51  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.4 seconds (JVM running for 3.507)
+2022-10-03 11:52:26  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 15588 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-03 11:52:26  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-03 11:52:28  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.429 seconds (JVM running for 3.517)
+2022-10-03 15:25:13  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 19548 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-03 15:25:13  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-03 15:25:24  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 4948 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-03 15:25:24  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-03 15:25:46  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 19080 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-03 15:25:46  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-03 15:25:48  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.93 seconds (JVM running for 2.8)
+2022-10-04 14:45:34  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 8432 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 14:45:34  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 14:45:36  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.204 seconds (JVM running for 3.331)
+2022-10-04 14:53:53  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 21776 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 14:53:53  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 14:53:54  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.97 seconds (JVM running for 2.993)
+2022-10-04 16:30:50  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 23392 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 16:30:50  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 16:30:51  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.975 seconds (JVM running for 3.042)
+2022-10-04 16:31:32  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 17972 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 16:31:32  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 16:31:34  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.955 seconds (JVM running for 2.947)
+2022-10-04 17:42:23  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 13144 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 17:42:23  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 17:42:25  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.187 seconds (JVM running for 3.396)
+2022-10-04 17:43:06  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 22940 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 17:43:06  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 17:43:07  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.262 seconds (JVM running for 3.514)
+2022-10-04 17:45:07  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 4864 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 17:45:07  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 17:45:09  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.202 seconds (JVM running for 3.385)
+2022-10-04 17:47:57 ERROR ScheduleLogic:45 - Message: Unrecognized field "dbName" (class com.atp.models.QDMObjectConfig), not marked as ignorable (18 known properties: "_key", "os", "tenantId", "maxFileSizeValueInMB", "name", "authtoken", "objectidgeneration", "secret_access_key", "storagetype", "access_key_id", "directoryname", "_id", "perDayMaxFileSizeUploadInMB", "path", "isauthrequired", "objectid", "_rev", "retentionPeriodInMins"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e4Jrn8a---","dbName":"GroupArangoDB","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":"","fileFormat":".png","osType":"w"[truncated 192 chars]; line: 1, column: 89] (through reference chain: java.util.ArrayList[0]->com.atp.models.QDMObjectConfig["dbName"])
+StackTrace
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "dbName" (class com.atp.models.QDMObjectConfig), not marked as ignorable (18 known properties: "_key", "os", "tenantId", "maxFileSizeValueInMB", "name", "authtoken", "objectidgeneration", "secret_access_key", "storagetype", "access_key_id", "directoryname", "_id", "perDayMaxFileSizeUploadInMB", "path", "isauthrequired", "objectid", "_rev", "retentionPeriodInMins"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e4Jrn8a---","dbName":"GroupArangoDB","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":"","fileFormat":".png","osType":"w"[truncated 192 chars]; line: 1, column: 89] (through reference chain: java.util.ArrayList[0]->com.atp.models.QDMObjectConfig["dbName"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:291)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:250)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:27)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3449)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:87)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:41)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-04 17:49:18  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 23424 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 17:49:18  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 17:49:19  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.267 seconds (JVM running for 3.44)
+2022-10-04 17:52:10  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 10464 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 17:52:11  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 17:52:12  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.2 seconds (JVM running for 3.371)
+2022-10-04 17:54:11 ERROR ScheduleLogic:45 - Message: C:\Users\Admin\Documents\archieve (Access is denied)
+StackTrace
+java.io.FileNotFoundException: C:\Users\Admin\Documents\archieve (Access is denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:358)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:395)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:100)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:41)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-04 17:54:23 ERROR ScheduleLogic:45 - Message: C:\Users\Admin\Documents\archieve (Access is denied)
+StackTrace
+java.io.FileNotFoundException: C:\Users\Admin\Documents\archieve (Access is denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:358)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:395)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:100)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:41)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-04 17:54:27 ERROR ScheduleLogic:45 - Message: C:\Users\Admin\Documents\archieve (Access is denied)
+StackTrace
+java.io.FileNotFoundException: C:\Users\Admin\Documents\archieve (Access is denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:358)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:395)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:100)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:41)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-04 17:54:58 ERROR ScheduleLogic:45 - Message: C:\Users\Admin\Documents\archieve (Access is denied)
+StackTrace
+java.io.FileNotFoundException: C:\Users\Admin\Documents\archieve (Access is denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:358)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:395)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:100)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:41)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-04 17:56:06 ERROR ScheduleLogic:45 - Message: C:\Users\Admin\Documents\archieve (Access is denied)
+StackTrace
+java.io.FileNotFoundException: C:\Users\Admin\Documents\archieve (Access is denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:358)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:395)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:100)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:41)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-04 17:57:21  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 13496 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-04 17:57:21  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-04 17:57:24  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 3.416 seconds (JVM running for 4.768)
+2022-10-06 12:02:32  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 27308 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:02:32  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:02:34  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.451 seconds (JVM running for 3.714)
+2022-10-06 12:06:00  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 12028 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:06:00  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:06:02  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.345 seconds (JVM running for 3.597)
+2022-10-06 12:11:36 ERROR ScheduleLogic:45 - Message: C:\Users\Admin\Documents\archieve (Access is denied)
+StackTrace
+java.io.FileNotFoundException: C:\Users\Admin\Documents\archieve (Access is denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:358)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:395)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:100)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:41)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 12:12:24  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 19964 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:12:24  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:12:26  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.224 seconds (JVM running for 3.361)
+2022-10-06 12:13:25 ERROR ScheduleLogic:45 - Message: C:\Users\Ravi\archieve (Access is denied)
+StackTrace
+java.io.FileNotFoundException: C:\Users\Ravi\archieve (Access is denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:291)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:234)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:123)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:358)
+	at com.atp.commonfiles.CommonFunctions.zip(CommonFunctions.java:395)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:100)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:41)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 12:15:45  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 22308 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:15:45  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:15:47  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.237 seconds (JVM running for 3.405)
+2022-10-06 12:19:28  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 3564 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:19:28  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:19:30  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.312 seconds (JVM running for 3.496)
+2022-10-06 12:20:37  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 23428 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:20:37  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:20:39  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.269 seconds (JVM running for 3.469)
+2022-10-06 12:22:55  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 25572 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:22:55  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:22:56  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.224 seconds (JVM running for 3.385)
+2022-10-06 12:23:13  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 3052 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:23:13  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:23:14  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.251 seconds (JVM running for 3.384)
+2022-10-06 12:26:14  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 18212 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:26:14  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:26:16  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.359 seconds (JVM running for 3.578)
+2022-10-06 12:33:58  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 25196 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 12:33:58  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 12:34:00  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.412 seconds (JVM running for 3.619)
+2022-10-06 13:06:34  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 21512 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 13:06:34  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 13:06:36  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.529 seconds (JVM running for 3.839)
+2022-10-06 13:07:36  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 18984 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 13:07:36  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 13:07:38  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.365 seconds (JVM running for 3.635)
+2022-10-06 13:10:15  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 7424 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 13:10:15  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 13:10:17  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.315 seconds (JVM running for 3.592)
+2022-10-06 13:29:29  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 24288 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 13:29:29  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 13:29:31  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.35 seconds (JVM running for 3.601)
+2022-10-06 13:30:57 ERROR ScheduleLogic:45 - Message: C:\Documents\fileupload
+StackTrace
+java.nio.file.NoSuchFileException: C:\Documents\fileupload
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:107)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 13:30:57 ERROR ScheduleLogic:45 - Message: C:\Documents\fileupload
+StackTrace
+java.nio.file.NoSuchFileException: C:\Documents\fileupload
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:107)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 13:30:58 ERROR ScheduleLogic:45 - Message: C:\Documents\fileupload
+StackTrace
+java.nio.file.NoSuchFileException: C:\Documents\fileupload
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:107)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 13:30:58 ERROR ScheduleLogic:45 - Message: C:\Documents\fileupload
+StackTrace
+java.nio.file.NoSuchFileException: C:\Documents\fileupload
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:107)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 13:31:00 ERROR ScheduleLogic:45 - Message: C:\Documents\fileupload
+StackTrace
+java.nio.file.NoSuchFileException: C:\Documents\fileupload
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:107)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 13:31:15 ERROR ScheduleLogic:45 - Message: C:\Documents\fileupload
+StackTrace
+java.nio.file.NoSuchFileException: C:\Documents\fileupload
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:107)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 13:31:30 ERROR ScheduleLogic:45 - Message: C:\Documents\fileupload
+StackTrace
+java.nio.file.NoSuchFileException: C:\Documents\fileupload
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:107)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 13:31:45 ERROR ScheduleLogic:45 - Message: C:\Documents\fileupload
+StackTrace
+java.nio.file.NoSuchFileException: C:\Documents\fileupload
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:53)
+	at java.base/sun.nio.fs.WindowsFileAttributeViews$Basic.readAttributes(WindowsFileAttributeViews.java:38)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.readAttributes(WindowsFileSystemProvider.java:198)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1843)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:107)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-06 13:35:02  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 26832 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-06 13:35:02  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-06 13:35:03  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.162 seconds (JVM running for 3.334)
+2022-10-07 16:23:05  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 9068 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-07 16:23:05  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-07 16:23:08  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 4.518 seconds (JVM running for 6.671)
+2022-10-07 16:27:25  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 26960 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-07 16:27:25  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-07 16:27:28  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 3.77 seconds (JVM running for 5.554)
+2022-10-10 10:03:37  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 22832 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 10:03:37  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 10:03:39  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.141 seconds (JVM running for 3.278)
+2022-10-10 10:12:27  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 18172 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 10:12:27  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 10:12:29  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.012 seconds (JVM running for 3.035)
+2022-10-10 10:23:56  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 23968 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 10:23:56  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 10:23:57  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.946 seconds (JVM running for 3.003)
+2022-10-10 10:24:04 ERROR ScheduleLogic:45 - Message: Cannot read the array length because "list" is null
+StackTrace
+java.lang.NullPointerException: Cannot read the array length because "list" is null
+	at com.atp.businesslogics.ScheduleLogic.isBackupExists(ScheduleLogic.java:144)
+	at com.atp.businesslogics.ScheduleLogic.fileBackupLogic(ScheduleLogic.java:199)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:109)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:55)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 10:25:32  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 17736 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 10:25:32  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 10:25:33  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.025 seconds (JVM running for 3.021)
+2022-10-10 10:52:54  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 20340 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 10:52:54  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 10:52:55  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.211 seconds (JVM running for 3.411)
+2022-10-10 11:12:47  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 22568 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 11:12:47  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 11:12:49  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.698 seconds (JVM running for 4.03)
+2022-10-10 11:18:25  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 14524 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 11:18:25  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 11:18:27  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.245 seconds (JVM running for 3.455)
+2022-10-10 12:09:57  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 17492 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 12:09:57  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 12:10:07  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 27472 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 12:10:07  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 12:10:08  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.26 seconds (JVM running for 3.469)
+2022-10-10 12:27:28  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 17932 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 12:27:28  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 12:27:30  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.298 seconds (JVM running for 3.548)
+2022-10-10 12:31:13  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 12808 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 12:31:13  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 12:31:15  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.38 seconds (JVM running for 3.55)
+2022-10-10 12:36:44  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 20616 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 12:36:44  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 12:36:46  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.836 seconds (JVM running for 4.194)
+2022-10-10 12:43:27  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 12156 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 12:43:27  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 12:43:29  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.314 seconds (JVM running for 3.495)
+2022-10-10 12:44:21  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 12168 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 12:44:21  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 12:44:23  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.24 seconds (JVM running for 3.415)
+2022-10-10 12:50:21 ERROR ScheduleLogic:45 - Message: Unrecognized field "outputBackupFileName" (class com.atp.models.IDMConfiguration), not marked as ignorable (24 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6BB53O---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 296 chars]; line: 1, column: 585] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["outputBackupFileName"])
+StackTrace
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "outputBackupFileName" (class com.atp.models.IDMConfiguration), not marked as ignorable (24 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6BB53O---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 296 chars]; line: 1, column: 585] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["outputBackupFileName"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:291)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:250)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:27)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3449)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:73)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 12:50:36 ERROR ScheduleLogic:45 - Message: Unrecognized field "outputBackupFileName" (class com.atp.models.IDMConfiguration), not marked as ignorable (24 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6BB53O---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 296 chars]; line: 1, column: 585] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["outputBackupFileName"])
+StackTrace
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "outputBackupFileName" (class com.atp.models.IDMConfiguration), not marked as ignorable (24 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6BB53O---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 296 chars]; line: 1, column: 585] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["outputBackupFileName"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:291)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:250)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:27)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3449)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:73)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 12:50:51 ERROR ScheduleLogic:45 - Message: Unrecognized field "outputBackupFileName" (class com.atp.models.IDMConfiguration), not marked as ignorable (24 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6BB53O---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 296 chars]; line: 1, column: 585] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["outputBackupFileName"])
+StackTrace
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "outputBackupFileName" (class com.atp.models.IDMConfiguration), not marked as ignorable (24 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6BB53O---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 296 chars]; line: 1, column: 585] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["outputBackupFileName"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:291)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:250)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:27)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3449)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:73)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 12:51:06 ERROR ScheduleLogic:45 - Message: Unrecognized field "outputBackupFileName" (class com.atp.models.IDMConfiguration), not marked as ignorable (24 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6BB53O---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 296 chars]; line: 1, column: 585] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["outputBackupFileName"])
+StackTrace
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "outputBackupFileName" (class com.atp.models.IDMConfiguration), not marked as ignorable (24 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6BB53O---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 296 chars]; line: 1, column: 585] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["outputBackupFileName"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:291)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:250)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:27)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3449)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:73)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 12:54:16  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 27868 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 12:54:16  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 12:54:18  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 2.186 seconds (JVM running for 3.327)
+2022-10-10 13:05:37 ERROR ScheduleLogic:45 - Message: Cannot invoke "com.google.gson.JsonElement.getAsJsonArray()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+StackTrace
+java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonElement.getAsJsonArray()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:71)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 13:05:59 ERROR ScheduleLogic:45 - Message: Cannot invoke "com.google.gson.JsonElement.getAsJsonArray()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+StackTrace
+java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonElement.getAsJsonArray()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:71)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 13:42:47 ERROR ScheduleLogic:45 - Message: Unrecognized field "clientName" (class com.atp.models.IDMConfiguration), not marked as ignorable (25 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "outputBackupFileName", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6Bx85S---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 312 chars]; line: 1, column: 797] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["clientName"])
+StackTrace
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "clientName" (class com.atp.models.IDMConfiguration), not marked as ignorable (25 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "outputBackupFileName", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6Bx85S---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 312 chars]; line: 1, column: 797] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["clientName"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:291)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:250)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:27)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3449)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:73)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 13:43:02 ERROR ScheduleLogic:45 - Message: Unrecognized field "clientName" (class com.atp.models.IDMConfiguration), not marked as ignorable (25 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "outputBackupFileName", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6ByJsq---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 331 chars]; line: 1, column: 797] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["clientName"])
+StackTrace
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "clientName" (class com.atp.models.IDMConfiguration), not marked as ignorable (25 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "outputBackupFileName", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6ByJsq---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 331 chars]; line: 1, column: 797] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["clientName"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:291)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:250)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:27)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3449)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:73)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 13:43:17 ERROR ScheduleLogic:45 - Message: Unrecognized field "clientName" (class com.atp.models.IDMConfiguration), not marked as ignorable (25 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "outputBackupFileName", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6ByJsq---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 331 chars]; line: 1, column: 797] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["clientName"])
+StackTrace
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "clientName" (class com.atp.models.IDMConfiguration), not marked as ignorable (25 known properties: "compressionType", "_rev", "tenantId", "active", "fileName", "keycloackClientSecrete", "dbName", "adminPassword", "keycloackUrl", "fileFormat", "keycloackGrantType", "collections", "realmName", "retentionPeriodInDays", "osType", "_key", "adminUserName", "archievePath", "keycloackClientId", "outputBackupFileName", "_id", "confType", "applicationName", "archievePeriodInDays", "archieveType"])
+ at [Source: (String)"[{"_key":"592825486","_id":"idm_configuration/592825486","_rev":"_e6ByJsq---","dbName":"GroupArangoDB","confType":"qdmfileupload","collections":["QDMObjectConfig","QDMObject"],"applicationName":"ArangoDB","realmName":"organization","keycloackUrl":"https://keycloak.dev.ainqaplatform.in","adminUserName":"admin@ainqaplatform.in","adminPassword":"admin@123","keycloackClientId":"user_client","keycloackClientSecrete":"rRmwEE59DbcswVCrAOBhgDR6gW1bmxsx","keycloackGrantType":"password","fileName":[],"fil"[truncated 331 chars]; line: 1, column: 797] (through reference chain: java.util.ArrayList[0]->com.atp.models.IDMConfiguration["clientName"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:855)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:1212)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1604)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1582)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:299)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:156)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:291)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:250)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:27)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4524)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3449)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:73)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 13:53:07  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 24824 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 13:53:07  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 13:53:08  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.882 seconds (JVM running for 2.852)
+2022-10-10 14:06:29  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 13204 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:06:29  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:06:30  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.793 seconds (JVM running for 2.784)
+2022-10-10 14:09:03  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 14052 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:09:03  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:09:04  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.854 seconds (JVM running for 2.878)
+2022-10-10 14:09:16  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 20620 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:09:16  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:09:17  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.939 seconds (JVM running for 2.986)
+2022-10-10 14:09:44  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 12696 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:09:44  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:09:46  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.909 seconds (JVM running for 2.903)
+2022-10-10 14:15:49  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 6524 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:15:49  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:15:50  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.852 seconds (JVM running for 2.853)
+2022-10-10 14:18:19  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 13576 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:18:19  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:18:20  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.934 seconds (JVM running for 2.939)
+2022-10-10 14:21:32  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 23644 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:21:32  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:21:33  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.825 seconds (JVM running for 2.854)
+2022-10-10 14:22:38 ERROR ScheduleLogic:45 - Message: Unable to delete file: src\main\resources\jsonfiles\QDMObjectConfig.json
+StackTrace
+java.io.IOException: Unable to delete file: src\main\resources\jsonfiles\QDMObjectConfig.json
+	at org.apache.tomcat.util.http.fileupload.FileUtils.forceDelete(FileUtils.java:144)
+	at org.apache.tomcat.util.http.fileupload.FileUtils.cleanDirectory(FileUtils.java:106)
+	at com.atp.businesslogics.ScheduleLogic.readQdmConfig(ScheduleLogic.java:142)
+	at com.atp.businesslogics.ScheduleLogic.lambda$0(ScheduleLogic.java:59)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+
+2022-10-10 14:27:12  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 17608 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:27:12  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:27:13  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.793 seconds (JVM running for 2.825)
+2022-10-10 14:39:55  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 13956 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:39:55  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:39:56  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.836 seconds (JVM running for 2.812)
+2022-10-10 14:49:40  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 23456 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:49:40  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:49:41  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.967 seconds (JVM running for 2.967)
+2022-10-10 14:54:25  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 9640 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 14:54:25  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 14:54:27  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.72 seconds (JVM running for 2.688)
+2022-10-10 15:06:57  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 25780 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 15:06:57  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 15:06:58  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.742 seconds (JVM running for 2.745)
+2022-10-10 15:28:18  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 23720 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 15:28:18  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 15:28:19  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.823 seconds (JVM running for 2.79)
+2022-10-10 15:30:19  INFO FilecleanupApplication:55 - Starting FilecleanupApplication using Java 15.0.1 on DESKTOP-42D10P7 with PID 28064 (C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup\target\classes started by Admin in C:\Users\Admin\Documents\Ravi\Allfiles\Allfiles3\Ravi\Build code\filecleanup_source\filecleanup)
+2022-10-10 15:30:19  INFO FilecleanupApplication:634 - No active profile set, falling back to 1 default profile: "default"
+2022-10-10 15:30:20  INFO FilecleanupApplication:61 - Started FilecleanupApplication in 1.656 seconds (JVM running for 2.673)
