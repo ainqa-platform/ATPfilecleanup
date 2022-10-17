@@ -170,6 +170,19 @@ public class JSON {
 		return new String("");
 	}
 	
+	public static String GetValue(JsonObject json,String key)
+	{
+		try
+		{
+			return json.has(key)?json.get(key).getAsString():"";
+		}
+		catch(Exception exp)
+		{
+			exp.printStackTrace();
+		}
+		return new String("");
+	}
+	
 	/**
 	 * Gets the object.
 	 *
@@ -190,6 +203,19 @@ public class JSON {
 		return null;
 	}
 	
+	public static JsonObject GetObject(JsonObject json,String key)
+	{
+		try
+		{
+			return json.has(key)?json.getAsJsonObject(key):null;
+		}
+		catch(Exception exp)
+		{
+			exp.printStackTrace();
+		}
+		return null;
+	}
+	
 	/**
 	 * Gets the json array.
 	 *
@@ -202,6 +228,19 @@ public class JSON {
 		try
 		{
 			return DeserializeObject(json).getAsJsonObject().getAsJsonArray(key);
+		}
+		catch(Exception exp)
+		{
+			exp.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static JsonArray GetJsonArray(JsonObject json,String key)
+	{
+		try
+		{
+			return json.has(key)?json.getAsJsonArray(key):new JsonArray();
 		}
 		catch(Exception exp)
 		{

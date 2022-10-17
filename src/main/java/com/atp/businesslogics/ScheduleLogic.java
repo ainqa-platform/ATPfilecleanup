@@ -1,10 +1,12 @@
 package com.atp.businesslogics;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
 import java.time.LocalDate;
@@ -20,6 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 import com.atp.commonfiles.CommonFields;
 import com.atp.commonfiles.CommonFields.QDMConfTypes;
+import com.atp.commonfiles.CommonFields.audit_type;
 import com.atp.commonfiles.CommonFunctions;
 import com.atp.commonfiles.Settings;
 import com.atp.commonfiles.SysLog;
@@ -52,13 +55,102 @@ public class ScheduleLogic {
 	public void ScheduleTask() {
 
 		Runnable task = () -> readQdmConfig();
+		Runnable task1 = () -> fileCleanup();
 		ScheduledExecutorService executor = Executors
 				.newScheduledThreadPool(Runtime.getRuntime().availableProcessors());
 
-		executor.scheduleAtFixedRate(task, 1, 15, TimeUnit.SECONDS);
+		executor.scheduleAtFixedRate(task, 0, 15, TimeUnit.SECONDS);
+		//executor.scheduleAtFixedRate(task1, 0, 15, TimeUnit.SECONDS);
+	}
+
+	public void fileCleanup() {
+		CommonFunctions common = new CommonFunctions();
+		try {
+			System.out.println("task1");
+
+			String readApi = common.ConcatStrings(gbarangoApi, CommonFields.read_documents);
+
+			String filter = CommonFields.IDM_CONFIGURATION + ".active=='Y'";
+
+			JsonObject readconfObj = common.ReadDocuments(gbmetadataDbName, CommonFields.IDM_CONFIGURATION, filter,
+					CommonFields.IDM_CONFIGURATION, readApi);
+
+			String json = readconfObj.get("result").getAsJsonArray().toString();
+
+			List<IDMConfiguration> idmconfList = objectMapper.readValue(json,
+					new TypeReference<List<IDMConfiguration>>() {
+					});
+
+			for (IDMConfiguration idmConfigurationObj : idmconfList) {
+
+				String sourcePath = idmConfigurationObj.getSourcePath();
+
+				int retentionPeriod = Integer.parseInt(idmConfigurationObj.getRetentionPeriodInDays());
+
+				if (retentionPeriod > 0 && sourcePath != null) {
+
+					File[] listFiles = new File(sourcePath).listFiles();
+
+					for (File file : listFiles) {
+
+						Path path = file.toPath();
+						BasicFileAttributes file_att = Files.readAttributes(path, BasicFileAttributes.class);
+						FileTime filecreationTime = file_att.creationTime();
+						long filecreationmillSec = filecreationTime.toMillis();
+
+						LocalDate currentDate = LocalDate.now();
+
+						long currentDateMilliSec = common.getMillSecFromDate(currentDate);
+
+						long diffMillSec = common.getDateDiffFromMilliSec(currentDateMilliSec, filecreationmillSec);
+
+						if (diffMillSec >= retentionPeriod) {
+							// fileclnLogObj.deleteFilesFromFolder(inputObj);
+							try {
+								AuditInsert(file, filecreationTime,audit_type.RETENTION.toString());
+								Files.deleteIfExists(Paths.get(path.toUri()));
+							} catch (Exception e) {
+								System.out.println("Invalid permissions.");
+							}
+
+							System.out.println("Deletion successful.");
+						}
+
+					}
+
+				}
+			}
+
+		} catch (Exception e) {
+			sysLog.error(e);
+		}
+	}
+
+	public void AuditInsert(File file, FileTime filecreationTime,String processType) {
+		CommonFunctions common = new CommonFunctions();
+		try {
+			String metadataDbName = Settings.get("metadatadbname");
+			String upsertApi = gbarangoApi + "" + CommonFields.upsert_document;
+			JsonObject docObj = new JsonObject();
+			docObj.addProperty("fileName", file.getName());
+			docObj.addProperty("fileCreationTime", filecreationTime.toMillis());
+			docObj.addProperty("fileSize", (file.length() / 1024) + "kb");
+//			FileInputStream fileStream = new FileInputStream(file);
+//			docObj.addProperty("filebyte", common.AESencrypt(file));
+			docObj.addProperty("fileCheckSum", common.convertFiletoMD5Format(file));
+			docObj.addProperty("appication", "fileCleanupService");
+			docObj.addProperty("processType", processType);
+			common.UpsertDocuments(metadataDbName, CommonFields.FILE_AUDIT_LOGS, "", docObj, upsertApi, "false", "",
+					metadataDbName);
+
+		} catch (Exception e) {
+			sysLog.error(e);
+		}
+
 	}
 
 	public void readQdmConfig() {
+		System.out.println("task");
 		CommonFunctions common = new CommonFunctions();
 		try {
 
@@ -108,13 +200,26 @@ public class ScheduleLogic {
 									idmConfigurationObj);
 
 						}
-					} else if (confType.equals(QDMConfTypes.collections.toString())) {
+					}
+
+					else if (confType.equals(QDMConfTypes.sourcefileupload.toString())) {
+						String fullPath = idmConfigurationObj.getSourcePath();
+						String archievePath = idmConfigurationObj.getArchievePath();
+						String archievePeriodInDays = idmConfigurationObj.getArchievePeriodInDays();
+						List<String> fileFormatLst = idmConfigurationObj.getFileFormat();
+						List<String> fileNameLst = idmConfigurationObj.getFileName();
+
+						fileBackupLogic(fullPath, archievePath, archievePeriodInDays, fileFormatLst, fileNameLst,
+								idmConfigurationObj);
+					}
+
+					else if (confType.equals(QDMConfTypes.collections.toString())) {
 						String fullPath = "src/main/resources/jsonfiles";
 						String archievePath = idmConfigurationObj.getArchievePath();
 						String archievePeriodInDays = idmConfigurationObj.getArchievePeriodInDays();
 
 						List<String> collections = idmConfigurationObj.getCollections();
-
+                       List<JsonObject> filesContentLst=new ArrayList<>();
 						for (String collectionName : collections) {
 
 							JsonObject readcollectObj = common.ReadDocuments(dbName, collectionName, "", collectionName,
@@ -122,17 +227,22 @@ public class ScheduleLogic {
 							JsonArray readcollectrsltArr = readcollectObj.has("result")
 									? readcollectObj.get("result").getAsJsonArray()
 									: null;
+							
 
-							FileWriter file = new FileWriter(fullPath + "/" + collectionName + ".json");
-							file.write(readcollectrsltArr.toString());
-							file.close();
+							JsonObject filecontObj = new JsonObject();
+
+							filecontObj.addProperty("fileName", collectionName + ".json");
+							filecontObj.addProperty("fileContent", readcollectrsltArr.toString());
+							filesContentLst.add(filecontObj);
+
+							
 
 						}
 
 						List<String> empttList = Collections.emptyList();
 
 						fileBackupLogicForCollections(fullPath, archievePath, archievePeriodInDays, empttList,
-								empttList, idmConfigurationObj);
+								empttList, idmConfigurationObj,filesContentLst);
 
 					}
 
@@ -150,6 +260,7 @@ public class ScheduleLogic {
 	}
 
 	public boolean isBackupExists(String archievePath) {
+		try {
 
 		File archieveFolder = new File(archievePath);
 
@@ -166,7 +277,10 @@ public class ScheduleLogic {
 		if (list.length > 0) {
 			return true;
 		}
-
+		}
+		catch (Exception e) {
+			sysLog.error(e);
+		}
 		return false;
 
 	}
@@ -204,7 +318,7 @@ public class ScheduleLogic {
 			return max;
 
 		} catch (Exception e) {
-			// TODO: handle exception
+			sysLog.error(e);
 		}
 
 		return 0;
@@ -214,6 +328,7 @@ public class ScheduleLogic {
 			List<String> fileFormatLst, List<String> fileNameLst, IDMConfiguration idmConfigurationObj) {
 
 		CommonFunctions common = new CommonFunctions();
+		FileCleanupLogics fileclnObj=new FileCleanupLogics();
 
 		try {
 			LocalDate localDate = LocalDate.now();
@@ -226,13 +341,24 @@ public class ScheduleLogic {
 
 			int currentDate = localDate.getDayOfMonth();
 			long currentDateInMillSec = localDate.toEpochSecond(LocalTime.now(), ZoneOffset.UTC) * 1000;
-			if (currentDate > filecreationDay && getDateDiffFromMilliSec(currentDateInMillSec,
+			if (currentDate > filecreationDay && common.getDateDiffFromMilliSec(currentDateInMillSec,
 					filecreatemilliSec) >= Long.parseLong(archievePeriodInDays)) {
-				if (getDateDiffFromMilliSec(currentDateInMillSec, getLastCreationFileinPath(backupPath,
+				if (common.getDateDiffFromMilliSec(currentDateInMillSec, getLastCreationFileinPath(backupPath,
 						idmConfigurationObj.getOutputBackupFileName())) >= Long.parseLong(archievePeriodInDays)) {
 					if (!isBackupExists(backupPath)) {
 						File[] a = qdmfileFolder.listFiles();
+						if(idmConfigurationObj.getArchieveType().equals("remote")) {
+						String remotePath="src/main/resources/compressfiles";
+						common.zip(a, remotePath, fileFormatLst, fileNameLst, idmConfigurationObj);	
+						readAndUploadToRemotePath(remotePath);
+						JsonObject clnObj=new JsonObject();
+						clnObj.addProperty("path", remotePath);
+						fileclnObj.deleteFilesFromFolder(clnObj);
+						
+						}
+						else {
 						common.zip(a, backupPath, fileFormatLst, fileNameLst, idmConfigurationObj);
+						}
 					}
 				}
 			}
@@ -240,46 +366,67 @@ public class ScheduleLogic {
 		} catch (Exception e) {
 			sysLog.error(e);
 		}
+	}
+	
+	public void readAndUploadToRemotePath(String remotePath) {
+		
+		try {
+			
+			File [] fileLst=new File(remotePath).listFiles();
+			
+		} catch (Exception e) {
+			sysLog.error(e);
+		}
+		
 	}
 
 	public void fileBackupLogicForCollections(String filePath, String backupPath, String archievePeriodInDays,
-			List<String> fileFormatLst, List<String> fileNameLst, IDMConfiguration idmConfigurationObj) {
+			List<String> fileFormatLst, List<String> fileNameLst, IDMConfiguration idmConfigurationObj,
+			List<JsonObject> filesContentLst) {
 
 		CommonFunctions common = new CommonFunctions();
+		FileCleanupLogics fileclnObj=new FileCleanupLogics(); 
 
 		try {
+
 			LocalDate localDate = LocalDate.now();
 
-			File qdmfileFolder = new File(filePath);
 			long currentDateInMillSec = localDate.toEpochSecond(LocalTime.now(), ZoneOffset.UTC) * 1000;
 
-			if (getDateDiffFromMilliSec(currentDateInMillSec, getLastCreationFileinPath(backupPath,
+			if (common.getDateDiffFromMilliSec(currentDateInMillSec, getLastCreationFileinPath(backupPath,
 					idmConfigurationObj.getOutputBackupFileName())) >= Long.parseLong(archievePeriodInDays)) {
 				if (!isBackupExists(backupPath)) {
+
+					if (filesContentLst != null && filesContentLst.size() > 0) {
+						for (JsonObject fileObj : filesContentLst) {
+
+							String fileName = fileObj.get("fileName").getAsString();
+
+							String fileContent = fileObj.get("fileContent").getAsString();
+							FileWriter file = new FileWriter(filePath + "/" + fileName);
+							file.write(fileContent);
+							file.flush();
+							file.close();
+						}
+					}
+
+					File qdmfileFolder = new File(filePath);
 					File[] a = qdmfileFolder.listFiles();
 					common.zip(a, backupPath, fileFormatLst, fileNameLst, idmConfigurationObj);
-					for (File file : a) {
-						File abfile=new File(file.getAbsolutePath());
-						boolean as=abfile.delete();
-						System.out.print("test");
-						
-					}
+					FileCleanupLogics filecleanLog = new FileCleanupLogics();
+					JsonObject delfileObj = new JsonObject();
+					delfileObj.addProperty("path", qdmfileFolder.getAbsolutePath());
+					filecleanLog.deleteFilesFromFolder(delfileObj);
 				}
+			}
+			else {
+				common.closeFiles("src/main/resources/jsonfiles");
+				fileclnObj.deleteFilesFromFolder("src/main/resources/jsonfiles");
 			}
 
 		} catch (Exception e) {
 			sysLog.error(e);
 		}
-	}
-
-	public long getDateDiffFromMilliSec(long from, long to) {
-
-		long diff = from - to;
-
-		long diffdays = TimeUnit.MILLISECONDS.toDays(diff);
-
-		return diffdays;
-
 	}
 
 }

@@ -18,9 +18,11 @@ public class CommonFields {
     public static String QDM_OBJECT_CONFIG="QDMObjectConfig";
     public static String QDM_OBJECT="QDMObject";
     public static String CONFTYPE_QDMFILEUPLOAD="qdmfileupload";
+    public static String FILE_AUDIT_LOGS="file_audit_logs";
     
     public enum QDMConfTypes{
     	qdmfileupload,
+    	sourcefileupload,
     	collections
     }
     
@@ -29,4 +31,10 @@ public class CommonFields {
     	JPG,
     	JPEG
     }
+    
+    public enum audit_type {
+    	BACKUP,
+    	RETENTION
+    }
+    
   }

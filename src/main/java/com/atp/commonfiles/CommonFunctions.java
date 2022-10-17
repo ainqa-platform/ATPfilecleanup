@@ -1,24 +1,37 @@
 package com.atp.commonfiles;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.security.KeyStore;
 import java.security.MessageDigest;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import javax.naming.directory.BasicAttributes;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
@@ -27,7 +40,10 @@ import javax.net.ssl.X509TrustManager;
 
 import org.springframework.stereotype.Component;
 
+import com.atp.businesslogics.ScheduleLogic;
+import com.atp.commonfiles.CommonFields.audit_type;
 import com.atp.models.IDMConfiguration;
+import com.github.mervick.aes_everywhere.Aes256;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -94,7 +110,7 @@ public class CommonFunctions {
 		}
 
 		catch (Exception e) {
-			// _log.error(e);
+			 _log.error(e);
 			JsonObject resultObj = new JsonObject();
 			resultObj.addProperty("Code", ErrorCodes.warning);
 			resultObj.addProperty("error", "not a valid url!");
@@ -210,7 +226,7 @@ public class CommonFunctions {
 		}
 
 		catch (Exception e) {
-			// _log.error(e);
+			 _log.error(e);
 			JsonObject resultObj = new JsonObject();
 			resultObj.addProperty("Code", ErrorCodes.warning);
 			resultObj.addProperty("error", "not a valid url!");
@@ -361,9 +377,26 @@ public class CommonFunctions {
 
 	public void zip(List<File> listFiles, String destZipFile, IDMConfiguration idmConfigurationObj)
 			throws FileNotFoundException, IOException {
+		
+		String osType=idmConfigurationObj.getOsType();
+		String compressionType=idmConfigurationObj.getCompressionType();
+		String fileFormat=".zip";
+		
+		if(osType.equals("windows") && compressionType.equals("rar")) {
+			fileFormat=".rar";
+		}
+		else if(osType.equals("linux") && compressionType.equals("tar")) {
+			fileFormat=".tar.gz";
+		}
+		else if(osType.equals("linux") && compressionType.equals("7z")) {
+			fileFormat=".7z";
+		}
+			
+		
+		
 		LocalDate localDate = LocalDate.now();
 		ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(
-				destZipFile + "/" + idmConfigurationObj.getOutputBackupFileName() + "_" + localDate + ".zip"));
+				destZipFile + "/" + idmConfigurationObj.getOutputBackupFileName() + "_" + localDate +fileFormat));
 		for (File file : listFiles) {
 			if (file.isDirectory()) {
 				zipDirectory(file, file.getName(), zos);
@@ -371,6 +404,11 @@ public class CommonFunctions {
 				zipFile(file, zos);
 			}
 		}
+		ScheduleLogic schlogObj=new ScheduleLogic();
+		File file=new File(destZipFile + "/" + idmConfigurationObj.getOutputBackupFileName() + "_" + localDate +fileFormat);
+		
+		BasicFileAttributes file_att = Files.readAttributes(file.toPath(), BasicFileAttributes.class);
+		schlogObj.AuditInsert(file, file_att.creationTime(),audit_type.BACKUP.toString());
 		zos.flush();
 		zos.close();
 	}
@@ -382,6 +420,7 @@ public class CommonFunctions {
 				zipDirectory(file, parentFolder + "/" + file.getName(), zos);
 				continue;
 			}
+			
 			zos.putNextEntry(new ZipEntry(parentFolder + "/" + file.getName()));
 			BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
 			long bytesRead = 0;
@@ -499,4 +538,172 @@ public class CommonFunctions {
 		// given format
 		return Long.parseLong(simple.format(result));
 	}
+	
+	public long getDateDiffFromMilliSec(long from, long to) {
+
+		long diff = from - to;
+
+		long diffdays = TimeUnit.MILLISECONDS.toDays(diff);
+
+		return diffdays;
+
+	}
+	
+	public long getMillSecFromDate(LocalDate date) {
+		
+		return date.toEpochSecond(LocalTime.now(), ZoneOffset.UTC) * 1000;
+	}
+	
+	public String convertFiletoMD5Format(File file) {
+		try {
+		MessageDigest md5Digest = MessageDigest.getInstance("MD5");
+		String checksum = checksum(md5Digest, file);
+		return checksum;
+		}catch (Exception e) {
+			
+		}
+
+	return "";	
+	}
+	
+	
+	
+	private static String checksum(MessageDigest digest, File file) throws IOException {
+
+		FileInputStream fis = new FileInputStream(file);
+
+		byte[] byteArray = new byte[1024];
+		int bytesCount = 0;
+
+		while ((bytesCount = fis.read(byteArray)) != -1) {
+			digest.update(byteArray, 0, bytesCount);
+		};
+
+		fis.close();
+
+		byte[] bytes = digest.digest();
+
+		StringBuilder sb = new StringBuilder();
+
+		for (int i = 0; i < bytes.length; i++) {
+
+			sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+		}
+		return sb.toString();
+	}
+	
+	
+	public String aescbcDecrypt(String encData) {
+		try {
+			String secret = Settings.get("aescbckey");
+			String decrypted = Aes256.decrypt(encData, secret);
+			return decrypted;
+
+		} catch (Exception e) {
+			_log.error(e);
+		}
+		return "";
+
+	}
+
+	public String aescbcEncrypt(String data) {
+		try {
+			String secret = Settings.get("aescbckey");
+			String encrypted_bytes = Aes256.encrypt(data, secret);
+			return encrypted_bytes;
+
+		} catch (Exception e) {
+			_log.error(e);
+		}
+		return "";
+	}
+	
+	public void closeFiles(String path) {
+		try {
+		File file=new File(path);
+		 if (file.exists()) {
+	            BufferedWriter bufferWriter = new BufferedWriter(new FileWriter(file, true));
+	            bufferWriter.write("New Text");
+	            bufferWriter.newLine();
+	            bufferWriter.close();
+	        }
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
+	public String AESencrypt(File file) {
+
+		try {
+			String key = Settings.get("AES_Salt_key");
+			String initVector =Settings.get("AES_Vector_key");
+			byte[] bytesIV = initVector.getBytes(StandardCharsets.UTF_8);
+			IvParameterSpec iv = new IvParameterSpec(bytesIV);
+			SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes(StandardCharsets.UTF_8), "AES");
+
+			Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+			cipher.init(Cipher.ENCRYPT_MODE, skeySpec, iv);
+			byte[] fileBytes = Files.readAllBytes(file.toPath());
+			byte[] encrypted = cipher.doFinal(fileBytes);
+
+			return Base64.getEncoder().encodeToString(encrypted);
+		} catch (Exception ex) {
+			_log.error(ex.getMessage());
+		}
+		return null;
+	}
+
+	public String AESdecryptFile(String encrypted) {
+		try {
+			String key =  Settings.get("AES_Salt_key");
+			String initVector =  Settings.get("AES_Vector_key");
+			IvParameterSpec iv = new IvParameterSpec(initVector.getBytes(StandardCharsets.UTF_8));
+			SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes(StandardCharsets.UTF_8), "AES");
+
+			Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+			cipher.init(Cipher.DECRYPT_MODE, skeySpec, iv);
+			byte[] original = cipher.doFinal(Base64.getDecoder().decode(encrypted));
+			writeByte(original);
+			return new String(original);
+		} catch (Exception ex) {
+			_log.error(ex.getMessage());
+		}
+
+		return null;
+	}
+	
+	 static void writeByte(byte[] bytes)
+	    {
+		 String FILEPATH = "C:\\Users\\Admin\\Documents\\decryptfile\\test.rar";
+		 File file = new File(FILEPATH);
+	 
+	        // Try block to check for exceptions
+	        try {
+	 
+	            // Initialize a pointer in file
+	            // using OutputStream
+	            OutputStream os = new FileOutputStream(file);
+	 
+	            // Starting writing the bytes in it
+	            os.write(bytes);
+	 
+	            // Display message onconsole for successful
+	            // execution
+	            System.out.println("Successfully"
+	                               + " byte inserted");
+	 
+	            // Close the file connections
+	            os.close();
+	        }
+	 
+	        // Catch block to handle the exceptions
+	        catch (Exception e) {
+	 
+	            // Display exception on console
+	            System.out.println("Exception: " + e);
+	        }
+	    }
+
+
+
 }

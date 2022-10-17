@@ -1,6 +1,8 @@
 package com.atp.models;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class IDMConfiguration {
 
 	public String tenantId;
@@ -28,10 +30,21 @@ public class IDMConfiguration {
 	public String dbName;
 	public String active;
 	public String _id;
+	
+	@Value(value = "0")
 	public String retentionPeriodInDays;
 	public String _key;
 	public String applicationName;
 	public String adminUserName;
+	
+	@Value(value = "")
+	public String sourcePath;
+	public String getSourcePath() {
+		return sourcePath;
+	}
+	public void setSourcePath(String sourcePath) {
+		this.sourcePath = sourcePath;
+	}
 	public String archievePath;
 	public String adminPassword;
 	public String  confType;
